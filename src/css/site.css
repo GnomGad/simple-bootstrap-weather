@@ -1,0 +1,21 @@
+body {
+    background: rgb(60, 134, 193);
+    background: radial-gradient(circle,
+            rgba(60, 134, 193, 1) 0%,
+            rgba(51, 132, 195, 1) 50%,
+            rgba(20, 175, 168, 1) 100%);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+}
+
+.weather-icon {
+    font-size: 50px;
+}
