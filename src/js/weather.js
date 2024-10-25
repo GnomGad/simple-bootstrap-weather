@@ -1,9 +1,9 @@
-function getWeatherIcon({ precipitation, rain, showers, snowfall, cloud_cover }) {
+function getWeatherIcon({ precipitation, rain, showers, snowfall, cloud_cover, is_day }) {
     if (precipitation === 0 && rain === 0 && snowfall === 0) {
         if (cloud_cover < 20) {
-            return "☀️";
+            return is_day ? "☀️" : "🌙";
         } else if (cloud_cover >= 20 && cloud_cover <= 50) {
-            return "🌤";
+            return is_day ? "🌤" : "☁️";
         } else if (cloud_cover > 50) {
             return "☁️";
         }
@@ -16,7 +16,7 @@ function getWeatherIcon({ precipitation, rain, showers, snowfall, cloud_cover })
         return "❄️";
     }
 
-    return "🌤";
+    return is_day ? "🌤" : "☁️";
 }
 
 function getSimpleWeatherIcon({ precipitation, rain, showers, snowfall }) {
